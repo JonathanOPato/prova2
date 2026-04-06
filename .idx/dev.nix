@@ -5,6 +5,9 @@
   channel = "stable-24.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
+    pkgs.minecraft-server
+    pkgs.pokemonsay
+    pkgs.texlivePackages.texlive-msg-translations
     pkgs.nodejs_22
     pkgs.python3
   ];
@@ -14,6 +17,12 @@
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       # "vscodevim.vim"
+      
+      "github.vscode-pull-request-github"
+      "llvm-vs-code-extensions.vscode-clangd"
+      "kristhdev.kristhdev-pikachu-theme-vscode"
+      "redhat.java"
+      "ritwickdey.liveserve"
       "google.gemini-cli-vscode-ide-companion"
     ];
     # Enable previews and customize configuration

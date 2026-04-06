@@ -1,1 +1,178 @@
-/* Add styles here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #FF007A;
+    --secondary-color: #00F2FF;
+    --background-color: #010101;
+    --text-color: #FFFFFF;
+    --card-background: #1a1a1a;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOCIgbnVtT2N0YXZlcz0iNCIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDIiLz48L3N2Zz4=');
+}
+
+header {
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+main {
+    padding-top: 60px;
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#hero {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#hero p {
+    font-size: 1.5rem;
+}
+
+.cta-button {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 20px var(--secondary-color), 0 0 30px var(--primary-color);
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px var(--secondary-color), 0 5px 35px var(--primary-color);
+}
+
+#speakers .speaker-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    display: inline-block;
+    width: 200px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#speakers .speaker-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#speakers .speaker-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+#schedule table {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+}
+
+#schedule th, #schedule td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--text-color);
+}
+
+#schedule th {
+    background-color: var(--card-background);
+}
+
+#register form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+#register input, #register button {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+}
+
+#register button {
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+#register button:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-background);
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+}
