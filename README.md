@@ -1,1 +1,3 @@
-A simple HTML/JS/CSS starter template
+on: [push] : toda vez que ocorre um push ele faz uma branch da main, ou seja uma copia anterior para caso você precise você possa fazer as seguintes operações a seguir de pull request com a main fazendo a abertura, sincronização, re-sincronização  ou o fechamento, fazendo com que caso você faça um push errado você possa retorna-lo, e faz com que a main sempre fique atualizada caso você fique recebendo alterações nela
+
+jobs: o jobs é o responsavel por checar quando ocorre um push ou seja uma alteração no codigo do github ele checa se teve alguma alteração e qual foi, se possuir ele manda um aviso para o azure para que ele faça um rebuild do projeto ou seja pegue de novo todos os arquivos do github e faça o deploy (reecriação do site com os novos arquivos) logo em seguida deixando o projeto atualizado online 
